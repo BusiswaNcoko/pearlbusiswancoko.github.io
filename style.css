@@ -1,0 +1,311 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: rgb(246, 248, 243);
+  width: 100vw;
+}
+/*==========nav bar===========*/
+
+#nav-bar{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color:rgba(230,230,230, 0.6);
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    width: 100vw;
+}
+
+
+.item-wrapper {
+    display: flex;
+    flex-direction: row;   
+}
+
+.item-wrapper>div{
+    padding: 30px;
+    font-size:0.90em;
+    text-transform: uppercase;
+}
+.name-wrapper {
+    height: 22px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.name-wrapper a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.name-wrapper :hover {
+    border-bottom: 2px solid #000;
+}
+
+.name-wrapper a :hover { 
+    color: #808080;
+    
+}
+.sign-wrapper {
+    padding: 30px 35px;
+}
+/*=============home section=============*/
+.home {
+    position: relative;
+    width: 100vw;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(9, 38, 97, 0.5),rgba(234,45,100,0.6)),url(unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 10px;
+
+}
+.home {
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 7px 7px 7px #abc;
+  padding-top: 40px;
+}  
+.heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: -35%;
+    left: 0;
+    background-color: rgba(234, 45, 187, 0.8);
+    height: 200px;
+    width: 200px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+  }
+  .heart:after {
+    background-color:  rgba(234, 45, 187, 0.8);
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    left: 100px;
+  }
+  .heart:before {
+    background-color: rgba(234, 45, 187, 0.8);;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: 0px;
+  }
+  @keyframes beat {
+    0% {
+      transform: scale(0) rotate(-45deg);
+    }
+    25%{
+      transform: scale(0.3) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.5) rotate(-45deg);
+    }
+    75%{
+      transform: scale(0.7) rotate(-45deg);
+    }
+    100%{
+      transform: scale(1) rotate(-45deg) ;
+    }
+  }
+  .ball {
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(45deg,
+      #ccffff,
+      #961496
+    );
+    transition: background 0.5s;
+    animation-name: bounce;
+    animation-duration: 6s;
+    animation-iteration-count:infinite;
+  }
+  .ball:hover{
+    background: transparent;
+  }
+  @keyframes bounce {
+    0% {
+      transform: scale(0) rotate(0deg);
+    }
+    25%{
+      transform: scale(0.2) rotate(90deg);
+    }
+    50% {
+      transform: scale(0.7) rotate(180deg);
+    }
+    75%{
+      transform: scale(0.8) rotate(270deg);
+    }
+    100%{
+      transform: scale(1) rotate(360deg) ;
+    }
+  }
+      #balls {
+          left:25%;
+      }
+      #Busi {
+          right:25%;
+      }
+      #ibhola {
+          left: 30%;
+      }
+
+   .ball a {
+     text-decoration: none;
+     color: transparent;
+     font-size: 30px;
+     transition: color 0.7s;
+   }
+   .ball a:hover{
+     color: #000;
+   }
+
+   /*===========about me=========*/
+
+   h1{
+     text-transform: uppercase;
+     text-align: center;
+     font-size: 60px;
+     font-weight: 600;
+     color:  rgba(77, 2, 48, 0.815);
+     }
+
+   h1::after {
+    content: '';
+    background: rgba(77, 2, 48, 0.815);
+    display: block;
+    height: 3px;
+    width: 200px;
+    margin: 5px auto 5px;
+   }
+
+   #aboutme{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     padding-left: 20px;
+     width: 90vw;
+}
+ 
+   article{
+     padding-right: 30px;
+     text-align: justify;
+     font-family: 'Oswald', sans-serif;
+     font-size: 0.9em;
+     width: 60vw;
+   }
+   ul>li {
+     color: rgba(77, 2, 48, 0.815);
+   }
+   #picture {
+     width: 30vw;
+     border: 10px solid rgba(77, 2, 48, 0.815);
+     padding: 15px;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     border-radius: 10px;
+   }
+/*==========My Projects===========*/
+.section-wrapper{
+  padding-top: 30px;
+  background-color: rgba(170, 187, 170, 0.267);
+  width: 100vw;
+}
+.text-wrapper{
+  text-align: center;
+  color: #1b1b1b;
+  font-size: 60px;
+  font-weight: 700;
+}
+.text-wrapper::after {
+  content: '';
+  background: #031d3a ;
+  display: block;
+  height: 3px;
+  width: 200px;
+  margin: 20px auto 5px;
+}
+.portfolio-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.project-image{
+  height: 200px;
+  width: 100%;
+  padding-top: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: transparent;
+  transition: color 0.5s;
+}
+.project-image:hover{
+ opacity: 0.9;
+  color:blue;
+  cursor: pointer;
+}
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: capitalize; 
+  text-decoration: none;
+}
+
+/*=================foooter============*/
+#contact{
+  padding-top:50px ;
+}
+.follow {
+  background: rgba(99, 97, 97, 0.192);
+  color: antiquewhite;
+  padding:10px;
+  margin : 10px;
+  width: 350px;
+  border-radius: 5px;
+  
+}
+.contact-info .fa {
+  margin: 10px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+footer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.99),rgba(0, 0, 0, 0.89)), url(footer.jpg);
+  position: static;
+  min-height: 200px;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#sign {
+  background:#808080 ;
+  padding:10px;
+  width: auto;
+}
+
+#sign p{
+  text-align: center;
+}
+.fa-heart-o{
+  color: #faa;
+}
